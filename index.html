@@ -25,7 +25,7 @@
     header {
       background: var(--bg);
       color: #fff;
-      padding: 1.2rem 1.5rem;
+      padding: 0.8rem 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -33,14 +33,14 @@
       top: 0;
       z-index: 50;
     }
-    /* novo: área do logo */
+    /* área do logo no topo */
     .logo-container {
       display: flex;
       align-items: center;
       gap: .75rem;
     }
     .logo-container img {
-      height: 48px;
+      height: 70px;       /* AUMENTEI o tamanho do logo do topo */
       width: auto;
     }
     .logo-text {
@@ -73,7 +73,7 @@
       text-align: center;
     }
     .hero img {
-      max-width: 180px;
+      max-width: 280px;   /* AUMENTEI o logo do meio */
       margin-bottom: 1.5rem;
       filter: drop-shadow(0 0 14px rgba(180,138,100,0.4));
     }
@@ -112,7 +112,7 @@
       color: var(--accent);
     }
     footer {
-      background: var(--bg);
+      background: #3E3E3E;
       color: #94a3b8;
       text-align: center;
       padding: 2rem 1.5rem;
@@ -125,7 +125,6 @@
 <body>
   <header>
     <div class="logo-container">
-      <!-- se o nome do arquivo no GitHub for outro, troque aqui -->
       <img src="logo-laris.png" alt="Logo Laris">
       <div class="logo-text">LARIS SCP</div>
     </div>
@@ -139,7 +138,6 @@
   </header>
 
   <section class="hero">
-    <!-- repete o logo no hero pra ficar mais institucional -->
     <img src="logo-laris.png" alt="Logo Laris">
     <h1>Laris - Sociedade em Conta de Participação</h1>
     <p>Participe do setor de serviços que mais cresce no Brasil e obtenha retornos descorrelacionados do mercado financeiro.</p>
@@ -220,4 +218,5 @@
   </footer>
 </body>
 </html>
+
 
