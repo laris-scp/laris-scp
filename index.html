@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laris SCP – Sociedade em Conta de Participação</title>
+  <meta name="description" content="Laris SCP – veículo para investimentos em commodities com estrutura simples e transparente.">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-light: #111827;
+      --card: #ffffff;
+      --text: #0f172a;
+      --accent: #f97316;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f3f4f6;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      background: var(--bg);
+      color: #fff;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .logo {
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+    nav a {
+      color: #e2e8f0;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-size: .9rem;
+    }
+    nav a:hover { color: #fff; }
+    .btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: .5rem 1rem;
+      border-radius: .5rem;
+      cursor: pointer;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1f2937);
+      color: #fff;
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      max-width: 40rem;
+      margin: 0 auto 2rem;
+      color: #cbd5f5;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    .card {
+      background: #fff;
+      border-radius: .75rem;
+      padding: 1.5rem;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, .05);
+    }
+    h2.section-title {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: .85rem;
+      margin-top: 3rem;
+    }
+    a { color: inherit; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Laris SCP</div>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#governanca">Governança</a>
+      <a href="#contato">Contato</a>
+      <a class="btn" href="#area-participante">Área do participante</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Sociedade em Conta de Participação para investimentos em commodities</h1>
+    <p>Estrutura simples, segregação de resultados e comunicação transparente com os sócios participantes.</p>
+    <a href="#contato" class="btn">Quero mais informações</a>
+  </section>
+
+  <section id="sobre" class="container">
+    <h2 class="section-title">Sobre a Laris SCP</h2>
+    <div class="grid grid-2">
+      <div>
+        <p>A Laris SCP é uma sociedade em conta de participação criada para reunir capital de parceiros e aplicar em oportunidades selecionadas, com foco em commodities e instrumentos financeiros relacionados.</p>
+        <p>O sócio ostensivo realiza a gestão e presta contas; os sócios participantes acompanham resultados e posição.</p>
+      </div>
+      <div class="card">
+        <h3>Características</h3>
+        <ul>
+          <li>✔ Estrutura privada</li>
+          <li>✔ Aporte por quotas</li>
+          <li>✔ Prestação de contas periódica</li>
+          <li>✔ Foco em proteção e retorno</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona" class="container">
+    <h2 class="section-title">Como funciona</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>1. Aportes</h3>
+        <p>Os participantes fazem seus aportes conforme acordado em contrato/termo de adesão.</p>
+      </div>
+      <div class="card">
+        <h3>2. Gestão</h3>
+        <p>O sócio ostensivo executa a estratégia (commodities, derivativos, proteção) seguindo a política definida.</p>
+      </div>
+      <div class="card">
+        <h3>3. Resultados</h3>
+        <p>Os resultados são apurados e rateados conforme a participação de cada sócio.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="governanca" class="container">
+    <h2 class="section-title">Governança e transparência</h2>
+    <div class="card">
+      <p>✔ Documentos formais de ingresso (minuta SCP / contrato)</p>
+      <p>✔ Registro interno de aportes, resgates e cotas</p>
+      <p>✔ Envio periódico de desempenho</p>
+      <p>✔ Canal de comunicação com o sócio ostensivo</p>
+      <p style="font-size:.8rem; color:#475569; margin-top:1rem;">Obs.: este site tem caráter informativo e não constitui oferta pública de valores mobiliários.</p>
+    </div>
+  </section>
+
+  <section id="area-participante" class="container">
+    <h2 class="section-title">Área do participante</h2>
+    <p>Se você já é sócio participante, solicite seu acesso direto ao gestor para consultar aportes, cotas e histórico.</p>
+    <p><strong>E-mail para acesso:</strong> contato@laris-scp.com.br (exemplo)</p>
+  </section>
+
+  <section id="contato" class="container">
+    <h2 class="section-title">Fale conosco</h2>
+    <div class="card">
+      <p>Preencha o formulário abaixo ou envie um e-mail:</p>
+      <p><strong>E-mail:</strong> contato@laris-scp.com.br</p>
+      <p><strong>WhatsApp:</strong> (00) 00000-0000</p>
+      <p style="font-size:.8rem; color:#475569; margin-top:1rem;">(Substitua pelos seus dados reais.)</p>
+    </div>
+  </section>
+
+  <footer>
+    Laris – Sociedade em Conta de Participação. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
