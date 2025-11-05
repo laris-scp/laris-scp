@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Ícones -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkCMaLL1XyS9H1I1+X2Vxwrp+o7Rk30F8lBQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <style>
     :root {
@@ -22,11 +22,14 @@
       --card: #ffffff;
       --text: #2B2B2B;
       --accent: #B48A64;
+      --section-bg: #f0f0f0;
     }
-    * { box-sizing: border-box; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       margin: 0;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: "Inter", sans-serif;
       background: #f3f4f6;
       color: var(--text);
       line-height: 1.6;
@@ -52,21 +55,25 @@
       top: 0;
       z-index: 50;
     }
+
     .logo-container {
       display: flex;
       align-items: center;
       gap: .75rem;
     }
+
     .logo-container img {
       height: 58px;
       width: auto;
     }
+
     .logo-text {
       font-family: "Cinzel", serif;
       font-weight: 700;
       letter-spacing: .08em;
       font-size: 1.1rem;
     }
+
     nav a {
       color: #e2e8f0;
       margin-left: 1.2rem;
@@ -74,6 +81,7 @@
       font-size: .9rem;
     }
     nav a:hover { color: var(--accent); }
+
     .btn {
       background: var(--accent);
       color: #fff;
@@ -86,7 +94,7 @@
       display: inline-block;
     }
 
-    /* HERO com marca d’água */
+    /* HERO */
     .hero {
       position: relative;
       background: linear-gradient(135deg, #3E3E3E, #555555);
@@ -95,6 +103,7 @@
       padding: 3.5rem 1.5rem 3.2rem;
       overflow: hidden;
     }
+
     .hero::before {
       content: "";
       position: absolute;
@@ -108,27 +117,32 @@
       transform: translate(-50%, -50%);
       pointer-events: none;
     }
+
     .hero-content {
       position: relative;
       z-index: 1;
       max-width: 50rem;
       margin: 0 auto;
     }
+
     .hero h1 {
       font-family: "Cinzel", serif;
       font-size: clamp(2.4rem, 4vw, 3.1rem);
       margin-bottom: 1rem;
     }
+
     .hero p {
       margin-bottom: 2rem;
       color: #f6f6f6;
     }
 
+    /* layout padrão */
     .container {
       max-width: 1100px;
       margin: 0 auto;
       padding: 3rem 1.5rem;
     }
+
     .section-title {
       font-family: "Cinzel", serif;
       font-size: 1.6rem;
@@ -138,29 +152,29 @@
       align-items: center;
       gap: .5rem;
     }
-    .section-title i {
-      color: var(--accent);
-    }
+
     .grid {
       display: grid;
       gap: 1.5rem;
     }
+
     @media (min-width: 768px) {
-      .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+      .grid-2 { grid-template-columns: repeat(2, 1fr); align-items: center; }
     }
+
     .card {
       background: #fff;
       border-radius: .75rem;
-      padding: 1.5rem 1.4rem 1.4rem;
+      padding: 1.5rem 1.4rem;
       box-shadow: 0 10px 30px rgba(15, 23, 42, .05);
     }
+
     .card h3 {
       font-family: "Cinzel", serif;
-      margin-top: 0;
       margin-bottom: .6rem;
     }
-    ul { padding-left: 1.1rem; }
+
     footer {
       background: #3E3E3E;
       color: #94a3b8;
@@ -169,19 +183,41 @@
       font-size: .85rem;
       margin-top: 3rem;
     }
-    a { color: inherit; }
+
+    /* ======== SEÇÃO DE INVESTIMENTO (faixa cinza com imagem grande) ======== */
+    .invest-section {
+      background: var(--section-bg);
+      padding: 4rem 0;
+    }
+
+    .invest-section img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: .5rem;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,.1);
+    }
+
+    /* ======== ÍCONES COMO FUNCIONA ======== */
+    .icon-box {
+      text-align: center;
+    }
+
+    .icon-box i {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
 
     @media (max-width: 640px) {
-      header {
-        flex-wrap: wrap;
-        gap: .75rem;
-      }
+      header { flex-wrap: wrap; gap: .75rem; }
       nav a { margin-left: .75rem; }
     }
   </style>
 </head>
 <body>
-  <!-- barra institucional -->
+
   <div class="topbar">
     Laris SCP – veículo privado de investimento em commodities. Acesso restrito a sócios participantes.
   </div>
@@ -220,49 +256,54 @@
         <h3>Diferencial</h3>
         <ul>
           <li><i class="fa-solid fa-shield-halved"></i> Estrutura privada</li>
-          <li><i class="fa-solid fa-user-tie"></i> Metodologia proprietária de investimentos</li>
+          <li><i class="fa-solid fa-user-tie"></i> Metodologia proprietária</li>
           <li><i class="fa-solid fa-people-group"></i> Equipe multidisciplinar</li>
-          <li><i class="fa-solid fa-chart-line"></i> Exposição a mercado incipiente</li>
+          <li><i class="fa-solid fa-chart-line"></i> Exposição a mercados incipientes</li>
           <li><i class="fa-solid fa-percent"></i> Tributação reduzida</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- nova seção inspirada na Concordia -->
-  <section class="container" id="solucao">
-    <div class="grid grid-2" style="align-items:center;">
+  <!-- ======== FAIXA DE INVESTIMENTO ======== -->
+  <section id="solucao" class="invest-section">
+    <div class="container grid grid-2">
       <div>
         <h2 class="section-title"><i class="fa-solid fa-coins"></i> Estrutura de investimento</h2>
         <p>A Laris SCP utiliza uma <strong>estrutura societária simples</strong>, com segregação entre o sócio ostensivo e os sócios participantes.</p>
         <p>Isso permite que investidores tenham acesso a operações em commodities sem precisar montar toda a infraestrutura jurídica, operacional e de relacionamento.</p>
+        <p>Relatórios periódicos, registro interno de quotas e <strong>gestão centralizada</strong>.</p>
         <a href="#contato" class="btn">Falar com o gestor</a>
       </div>
       <div>
-        <!-- você pode trocar por uma imagem real depois -->
-        <img src="aperto_de_mao.jpeg" alt="Laris" style="max-width:330px; display:block; margin:0 auto; opacity:.9;">
+        <img src="aperto_de_mao.jpeg" alt="Acordo entre investidores">
       </div>
     </div>
   </section>
 
+  <!-- ======== COMO FUNCIONA ======== -->
   <section id="como-funciona" class="container">
     <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> Como funciona</h2>
     <div class="grid grid-3">
-      <div class="card">
-        <h3>1. Assinatura</h3>
-        <p>Os sócios participantes assinam um <strong>contrato/termo de adesão</strong> à sociedade.</p>
+      <div class="card icon-box">
+        <i class="fa-regular fa-file-signature"></i>
+        <h3>Assinatura</h3>
+        <p>Os sócios assinam um <strong>termo de adesão</strong> à sociedade, formalizando sua participação.</p>
       </div>
-      <div class="card">
-        <h3>2. Arrecadação</h3>
-        <p>Os recursos são enviados para a <strong>conta bancária da Laris SCP</strong>.</p>
+      <div class="card icon-box">
+        <i class="fa-solid fa-piggy-bank"></i>
+        <h3>Arrecadação</h3>
+        <p>Os recursos são enviados à <strong>conta bancária</strong> da SCP e alocados conforme o plano de gestão.</p>
       </div>
-      <div class="card">
-        <h3>3. Gestão</h3>
-        <p>O sócio ostensivo atua conforme as <strong>diretrizes definidas</strong> no instrumento societário.</p>
+      <div class="card icon-box">
+        <i class="fa-solid fa-briefcase"></i>
+        <h3>Gestão</h3>
+        <p>O sócio ostensivo administra conforme as <strong>diretrizes definidas</strong> no instrumento societário.</p>
       </div>
-      <div class="card">
-        <h3>4. Resultado</h3>
-        <p>Os sócios recebem a sua parte dos <strong>lucros já líquidos de IR</strong>, conforme participação.</p>
+      <div class="card icon-box">
+        <i class="fa-solid fa-chart-pie"></i>
+        <h3>Resultado</h3>
+        <p>Os participantes recebem <strong>rendimentos proporcionais</strong> à sua cota, já líquidos de IR.</p>
       </div>
     </div>
   </section>
@@ -274,23 +315,6 @@
       <p>✔ Registro interno de aportes, resgates e cotas</p>
       <p>✔ Envio periódico de desempenho</p>
       <p>✔ Canal de comunicação com o sócio ostensivo</p>
-      <p style="font-size:.8rem; color:#475569; margin-top:1rem;">Obs.: este site tem caráter informativo e não constitui oferta pública de valores mobiliários.</p>
-    </div>
-  </section>
-
-  <section id="area-participante" class="container">
-    <h2 class="section-title"><i class="fa-solid fa-user-lock"></i> Área do participante</h2>
-    <p>Se você já é sócio participante, solicite seu acesso direto ao gestor para consultar aportes, cotas e histórico.</p>
-    <p><strong>E-mail para acesso:</strong> larisfinancialservices@gmail.com</p>
-  </section>
-
-  <section id="contato" class="container">
-    <h2 class="section-title"><i class="fa-solid fa-message"></i> Fale conosco</h2>
-    <div class="card">
-      <p>Entre em contato para saber condições, documentos e calendário de aportes.</p>
-      <p><strong>E-mail:</strong> larisfinancialservices@gmail.com</p>
-      <p><strong>WhatsApp:</strong> (16) 99610-5882</p>
-      <p style="font-size:.8rem; color:#475569; margin-top:1rem;">(Substitua pelos seus dados reais, se forem outros.)</p>
     </div>
   </section>
 
@@ -299,6 +323,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
