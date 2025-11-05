@@ -91,49 +91,52 @@
       font-weight: 500;
       text-decoration: none;
       display: inline-block;
-      margin-top: 1.2rem; /* afastou do texto */
+      margin-top: 1.2rem;
     }
 
-    /* HERO */
+    /* HERO COM IMAGEM */
     .hero {
       position: relative;
-      background: linear-gradient(135deg, #3E3E3E, #555555);
+      min-height: 420px;
+      background-image:
+        linear-gradient(120deg, rgba(62,62,62,.73), rgba(62,62,62,.85)),
+        url('capa_commodities.jpg'); /* <-- troque aqui se o nome for outro */
+      background-size: cover;
+      background-position: center;
       color: #fff;
       text-align: center;
-      padding: 3.5rem 1.5rem 3.2rem;
+      padding: 4.5rem 1.5rem 3.5rem;
       overflow: hidden;
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      width: 360px;
-      height: 360px;
-      background: url('icone-laris.png') no-repeat center center;
-      background-size: contain;
-      opacity: 0.1; /* sua marca d’água mais visível */
-      transform: translate(-50%, -50%);
-      pointer-events: none;
+    /* logo grande no centro, por cima da imagem */
+    .hero-logo {
+      width: 130px;
+      margin: 0 auto 1.5rem;
+      display: block;
+      filter: drop-shadow(0 0 8px rgba(0,0,0,.45));
     }
 
     .hero-content {
       position: relative;
       z-index: 1;
-      max-width: 50rem;
+      max-width: 55rem;
       margin: 0 auto;
     }
 
     .hero h1 {
       font-family: "Cinzel", serif;
-      font-size: clamp(2.4rem, 4vw, 3.1rem);
-      margin-bottom: 1rem;
+      font-size: clamp(2.7rem, 4.3vw, 3.3rem);
+      margin-bottom: 1.2rem;
+      line-height: 1.1;
     }
 
     .hero p {
       margin-bottom: 2rem;
       color: #f6f6f6;
+      max-width: 42rem;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     /* layout padrão */
@@ -247,6 +250,7 @@
     @media (max-width: 640px) {
       header { flex-wrap: wrap; gap: .75rem; }
       nav a { margin-left: .75rem; }
+      .hero { min-height: 460px; }
     }
   </style>
 </head>
@@ -273,7 +277,9 @@
 
   <section class="hero">
     <div class="hero-content">
-      <h1>Laris - Sociedade em Conta de Participação</h1>
+      <!-- logo por cima da foto -->
+      <img src="icone-laris.png" alt="Laris SCP" class="hero-logo">
+      <h1>LARIS - SOCIEDADE EM CONTA DE PARTICIPAÇÃO</h1>
       <p><strong>Participe do setor de serviços que mais cresce no Brasil</strong> e obtenha retornos descorrelacionados do mercado financeiro.</p>
       <a href="#contato" class="btn"><i class="fa-solid fa-envelope"></i> Quero mais informações</a>
     </div>
@@ -362,7 +368,6 @@
     <div class="card">
       <p>Entre em contato para saber condições, documentos e calendário de aportes.</p>
       <p><strong>E-mail:</strong> larisfinancialservices@gmail.com</p>
-      <p style="font-size:.8rem; color:#475569; margin-top:1rem;"></p>
     </div>
   </section>
 
@@ -376,6 +381,7 @@
 
 </body>
 </html>
+
 
 
 
