@@ -28,7 +28,6 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      margin: 0;
       font-family: "Inter", sans-serif;
       background: #f3f4f6;
       color: var(--text);
@@ -175,16 +174,7 @@
       margin-bottom: .6rem;
     }
 
-    footer {
-      background: #3E3E3E;
-      color: #94a3b8;
-      text-align: center;
-      padding: 2rem 1.5rem;
-      font-size: .85rem;
-      margin-top: 3rem;
-    }
-
-    /* ======== SEÇÃO DE INVESTIMENTO (faixa cinza com imagem grande) ======== */
+    /* ======== FAIXA DE INVESTIMENTO ======== */
     .invest-section {
       background: var(--section-bg);
       padding: 4rem 0;
@@ -208,6 +198,27 @@
       font-size: 2.5rem;
       color: var(--accent);
       margin-bottom: 1rem;
+    }
+
+    /* arrumar lista do diferencial: sem bolinhas */
+    .feature-list {
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      gap: .6rem;
+    }
+    .feature-list li i {
+      color: var(--accent);
+      margin-right: .5rem;
+    }
+
+    footer {
+      background: #3E3E3E;
+      color: #94a3b8;
+      text-align: center;
+      padding: 2rem 1.5rem 3.5rem;
+      font-size: .85rem;
+      margin-top: 3rem;
     }
 
     @media (max-width: 640px) {
@@ -254,7 +265,7 @@
       </div>
       <div class="card">
         <h3>Diferencial</h3>
-        <ul>
+        <ul class="feature-list">
           <li><i class="fa-solid fa-shield-halved"></i> Estrutura privada</li>
           <li><i class="fa-solid fa-user-tie"></i> Metodologia proprietária</li>
           <li><i class="fa-solid fa-people-group"></i> Equipe multidisciplinar</li>
@@ -265,7 +276,7 @@
     </div>
   </section>
 
-  <!-- ======== FAIXA DE INVESTIMENTO ======== -->
+  <!-- FAIXA DESTACADA -->
   <section id="solucao" class="invest-section">
     <div class="container grid grid-2">
       <div>
@@ -276,17 +287,18 @@
         <a href="#contato" class="btn">Falar com o gestor</a>
       </div>
       <div>
+        <!-- imagem grande dentro da faixa -->
         <img src="aperto_de_mao.jpeg" alt="Acordo entre investidores">
       </div>
     </div>
   </section>
 
-  <!-- ======== COMO FUNCIONA ======== -->
+  <!-- COMO FUNCIONA -->
   <section id="como-funciona" class="container">
     <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> Como funciona</h2>
     <div class="grid grid-3">
       <div class="card icon-box">
-        <i class="fa-regular fa-file-signature"></i>
+        <i class="fa-regular fa-file-lines"></i>
         <h3>Assinatura</h3>
         <p>Os sócios assinam um <strong>termo de adesão</strong> à sociedade, formalizando sua participação.</p>
       </div>
@@ -315,6 +327,24 @@
       <p>✔ Registro interno de aportes, resgates e cotas</p>
       <p>✔ Envio periódico de desempenho</p>
       <p>✔ Canal de comunicação com o sócio ostensivo</p>
+      <p style="font-size:.8rem; color:#475569; margin-top:1rem;">Obs.: este site tem caráter informativo e não constitui oferta pública de valores mobiliários.</p>
+    </div>
+  </section>
+
+  <!-- VOLTANDO O QUE VOCÊ TINHA -->
+  <section id="area-participante" class="container">
+    <h2 class="section-title"><i class="fa-solid fa-user-lock"></i> Área do participante</h2>
+    <p>Se você já é sócio participante, solicite seu acesso direto ao gestor para consultar aportes, cotas e histórico.</p>
+    <p><strong>E-mail para acesso:</strong> larisfinancialservices@gmail.com</p>
+  </section>
+
+  <section id="contato" class="container">
+    <h2 class="section-title"><i class="fa-solid fa-message"></i> Fale conosco</h2>
+    <div class="card">
+      <p>Entre em contato para saber condições, documentos e calendário de aportes.</p>
+      <p><strong>E-mail:</strong> larisfinancialservices@gmail.com</p>
+      <p><strong>WhatsApp:</strong> (16) 99610-5882</p>
+      <p style="font-size:.8rem; color:#475569; margin-top:1rem;">(Substitua pelos seus dados reais, se forem outros.)</p>
     </div>
   </section>
 
@@ -323,6 +353,8 @@
   </footer>
 </body>
 </html>
+
+
 
 
 
