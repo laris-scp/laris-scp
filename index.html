@@ -6,23 +6,41 @@
   <title>Laris SCP – Sociedade em Conta de Participação</title>
   <meta name="description" content="Laris SCP – veículo para investimentos em commodities com estrutura simples e transparente.">
   <link rel="icon" type="image/png" href="icone-laris.png">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkCMaLL1XyS9H1I1+X2Vxwrp+o7Rk30F8lBQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
     :root {
-      /* cores aproximadas do seu logo */
-      --bg: #3E3E3E;        /* fundo do topo e rodapé */
-      --bg-light: #555555;  /* se precisar de fundo mais claro */
+      --bg: #3E3E3E;
+      --bg-light: #555555;
       --card: #ffffff;
       --text: #2B2B2B;
-      --accent: #B48A64;    /* tom bronze do logo */
+      --accent: #B48A64;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: #f3f4f6;
       color: var(--text);
-      line-height: 1.5;
+      line-height: 1.6;
     }
+
+    /* barra institucional */
+    .topbar {
+      background:#2f3437;
+      color:#d1d5db;
+      text-align:center;
+      padding:.4rem 1rem;
+      font-size:.75rem;
+    }
+
     header {
       background: var(--bg);
       color: #fff;
@@ -34,24 +52,24 @@
       top: 0;
       z-index: 50;
     }
-    /* área do logo no topo */
     .logo-container {
       display: flex;
       align-items: center;
       gap: .75rem;
     }
     .logo-container img {
-      height: 70px;
+      height: 58px;
       width: auto;
     }
     .logo-text {
+      font-family: "Cinzel", serif;
       font-weight: 700;
       letter-spacing: .08em;
       font-size: 1.1rem;
     }
     nav a {
       color: #e2e8f0;
-      margin-left: 1rem;
+      margin-left: 1.2rem;
       text-decoration: none;
       font-size: .9rem;
     }
@@ -60,7 +78,7 @@
       background: var(--accent);
       color: #fff;
       border: none;
-      padding: .5rem 1rem;
+      padding: .6rem 1.1rem;
       border-radius: .5rem;
       cursor: pointer;
       font-weight: 500;
@@ -68,16 +86,15 @@
       display: inline-block;
     }
 
-    /* ===== HERO COM MARCA D'ÁGUA ===== */
+    /* HERO com marca d’água */
     .hero {
       position: relative;
       background: linear-gradient(135deg, #3E3E3E, #555555);
       color: #fff;
       text-align: center;
-      padding: 3rem 1.5rem 2.8rem;
+      padding: 3.5rem 1.5rem 3.2rem;
       overflow: hidden;
     }
-    /* marca d’água ao centro */
     .hero::before {
       content: "";
       position: absolute;
@@ -87,29 +104,42 @@
       height: 360px;
       background: url('icone-laris.png') no-repeat center center;
       background-size: contain;
-      opacity: 0.08;
+      opacity: 0.07;
       transform: translate(-50%, -50%);
       pointer-events: none;
     }
     .hero-content {
       position: relative;
       z-index: 1;
+      max-width: 50rem;
+      margin: 0 auto;
     }
     .hero h1 {
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-family: "Cinzel", serif;
+      font-size: clamp(2.4rem, 4vw, 3.1rem);
       margin-bottom: 1rem;
-      color: #fff;
     }
     .hero p {
-      max-width: 40rem;
-      margin: 0 auto 2rem;
-      color: #f1f1f1;
+      margin-bottom: 2rem;
+      color: #f6f6f6;
     }
 
     .container {
       max-width: 1100px;
       margin: 0 auto;
       padding: 3rem 1.5rem;
+    }
+    .section-title {
+      font-family: "Cinzel", serif;
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .section-title i {
+      color: var(--accent);
     }
     .grid {
       display: grid;
@@ -122,14 +152,15 @@
     .card {
       background: #fff;
       border-radius: .75rem;
-      padding: 1.5rem;
+      padding: 1.5rem 1.4rem 1.4rem;
       box-shadow: 0 10px 30px rgba(15, 23, 42, .05);
     }
-    h2.section-title {
-      font-size: 1.6rem;
-      margin-bottom: 1.5rem;
-      color: var(--accent);
+    .card h3 {
+      font-family: "Cinzel", serif;
+      margin-top: 0;
+      margin-bottom: .6rem;
     }
+    ul { padding-left: 1.1rem; }
     footer {
       background: #3E3E3E;
       color: #94a3b8;
@@ -139,9 +170,22 @@
       margin-top: 3rem;
     }
     a { color: inherit; }
+
+    @media (max-width: 640px) {
+      header {
+        flex-wrap: wrap;
+        gap: .75rem;
+      }
+      nav a { margin-left: .75rem; }
+    }
   </style>
 </head>
 <body>
+  <!-- barra institucional -->
+  <div class="topbar">
+    Laris SCP – veículo privado de investimento em commodities. Acesso restrito a sócios participantes.
+  </div>
+
   <header>
     <div class="logo-container">
       <img src="icone-laris.png" alt="Logo Laris">
@@ -149,6 +193,7 @@
     </div>
     <nav>
       <a href="#sobre">Sobre</a>
+      <a href="#solucao">Estrutura</a>
       <a href="#como-funciona">Como funciona</a>
       <a href="#governanca">Governança</a>
       <a href="#contato">Contato</a>
@@ -156,59 +201,75 @@
     </nav>
   </header>
 
-  <!-- hero agora sem <img>, com marca d’água no fundo -->
   <section class="hero">
     <div class="hero-content">
       <h1>Laris - Sociedade em Conta de Participação</h1>
-      <p>Participe do setor de serviços que mais cresce no Brasil e obtenha retornos descorrelacionados do mercado financeiro.</p>
-      <a href="#contato" class="btn">Quero mais informações</a>
+      <p><strong>Participe do setor de serviços que mais cresce no Brasil</strong> e obtenha retornos descorrelacionados do mercado financeiro.</p>
+      <a href="#contato" class="btn"><i class="fa-solid fa-envelope"></i> Quero mais informações</a>
     </div>
   </section>
 
   <section id="sobre" class="container">
-    <h2 class="section-title">Sobre a Laris SCP</h2>
+    <h2 class="section-title"><i class="fa-solid fa-building-columns"></i> Sobre a Laris SCP</h2>
     <div class="grid grid-2">
       <div>
-        <p>A Laris SCP é uma Sociedade em Conta de Participação criada como uma frente de negócio da Laris Financial Services para investimento em commodities.</p>
-        <p>O objetivo da SCP é o crecimento patrimonial dos sócios participantes e a obtenção de retorno descorrelacionado dos ativos financeiros do mercado de capitais.</p>
+        <p>A <strong>Laris SCP</strong> é uma Sociedade em Conta de Participação criada como uma frente de negócio da <strong>Laris Financial Services</strong> para investimento em commodities.</p>
+        <p>O objetivo é o <strong>crescimento patrimonial dos sócios participantes</strong> e a obtenção de retorno <strong>descorrelacionado</strong> dos ativos financeiros do mercado de capitais.</p>
       </div>
       <div class="card">
         <h3>Diferencial</h3>
         <ul>
-          <li>✔ Estrutura privada</li>
-          <li>✔ Metodologia proprietária de investimentos</li>
-          <li>✔ Equipe multidisciplinar</li>
-          <li>✔ Exposição a mercado incipiente</li>
-          <li>✔ Tributação reduzida</li>
+          <li><i class="fa-solid fa-shield-halved"></i> Estrutura privada</li>
+          <li><i class="fa-solid fa-user-tie"></i> Metodologia proprietária de investimentos</li>
+          <li><i class="fa-solid fa-people-group"></i> Equipe multidisciplinar</li>
+          <li><i class="fa-solid fa-chart-line"></i> Exposição a mercado incipiente</li>
+          <li><i class="fa-solid fa-percent"></i> Tributação reduzida</li>
         </ul>
       </div>
     </div>
   </section>
 
+  <!-- nova seção inspirada na Concordia -->
+  <section class="container" id="solucao">
+    <div class="grid grid-2" style="align-items:center;">
+      <div>
+        <h2 class="section-title"><i class="fa-solid fa-coins"></i> Estrutura de investimento</h2>
+        <p>A Laris SCP utiliza uma <strong>estrutura societária simples</strong>, com segregação entre o sócio ostensivo e os sócios participantes.</p>
+        <p>Isso permite que investidores tenham acesso a operações em commodities sem precisar montar toda a infraestrutura jurídica, operacional e de relacionamento.</p>
+        <p>Relatórios periódicos, registro interno de quotas e <strong>gestão centralizada</strong>.</p>
+        <a href="#contato" class="btn">Falar com o gestor</a>
+      </div>
+      <div>
+        <!-- você pode trocar por uma imagem real depois -->
+        <img src="icone-laris.png" alt="Laris" style="max-width:330px; display:block; margin:0 auto; opacity:.9;">
+      </div>
+    </div>
+  </section>
+
   <section id="como-funciona" class="container">
-    <h2 class="section-title">Como funciona</h2>
+    <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> Como funciona</h2>
     <div class="grid grid-3">
       <div class="card">
-        <h3>1. Assinatura de Contrato</h3>
-        <p>Os sócios participantes assinam um contrato/termo de adesão à sociedade.</p>
+        <h3>1. Assinatura</h3>
+        <p>Os sócios participantes assinam um <strong>contrato/termo de adesão</strong> à sociedade.</p>
       </div>
       <div class="card">
         <h3>2. Arrecadação</h3>
-        <p>Os sócios participantes transferem fundos para conta bancária da Laris SCP.</p>
+        <p>Os recursos são enviados para a <strong>conta bancária da Laris SCP</strong>.</p>
       </div>
       <div class="card">
         <h3>3. Gestão</h3>
-        <p>O sócio ostensivo realiza a gestão e operação com o patrimônio da SCP seguindo as diretrizes do contrato/termo de adesão da sociedade.</p>
+        <p>O sócio ostensivo atua conforme as <strong>diretrizes definidas</strong> no instrumento societário.</p>
       </div>
       <div class="card">
         <h3>4. Resultado</h3>
-        <p>Os sócios recebem parte dos lucros da SCP já líquidos de IR.</p>
+        <p>Os sócios recebem a sua parte dos <strong>lucros já líquidos de IR</strong>, conforme participação.</p>
       </div>
     </div>
   </section>
 
   <section id="governanca" class="container">
-    <h2 class="section-title">Governança e transparência</h2>
+    <h2 class="section-title"><i class="fa-solid fa-scale-balanced"></i> Governança e transparência</h2>
     <div class="card">
       <p>✔ Documentos formais de ingresso (minuta SCP / contrato)</p>
       <p>✔ Registro interno de aportes, resgates e cotas</p>
@@ -219,18 +280,18 @@
   </section>
 
   <section id="area-participante" class="container">
-    <h2 class="section-title">Área do participante</h2>
+    <h2 class="section-title"><i class="fa-solid fa-user-lock"></i> Área do participante</h2>
     <p>Se você já é sócio participante, solicite seu acesso direto ao gestor para consultar aportes, cotas e histórico.</p>
     <p><strong>E-mail para acesso:</strong> larisfinancialservices@gmail.com</p>
   </section>
 
   <section id="contato" class="container">
-    <h2 class="section-title">Fale conosco</h2>
+    <h2 class="section-title"><i class="fa-solid fa-message"></i> Fale conosco</h2>
     <div class="card">
-      <p>Preencha o formulário abaixo ou envie um e-mail:</p>
+      <p>Entre em contato para saber condições, documentos e calendário de aportes.</p>
       <p><strong>E-mail:</strong> larisfinancialservices@gmail.com</p>
       <p><strong>WhatsApp:</strong> (16) 99610-5882</p>
-      <p style="font-size:.8rem; color:#475569; margin-top:1rem;">(Substitua pelos seus dados reais.)</p>
+      <p style="font-size:.8rem; color:#475569; margin-top:1rem;">(Substitua pelos seus dados reais, se forem outros.)</p>
     </div>
   </section>
 
